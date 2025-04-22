@@ -1,3 +1,9 @@
+# Each function below corresponds to one of questions from part 2 on the exam.
+# Your code should RETURN (i.e., not print!) the answer to its corresponding
+# question. Do NOT change the names of the functions nor their signatures 
+# (i.e., the parameters they take). Type annotations are provided for reference.
+
+
 def f01(l: list[str]) -> set[str]:
     unique_strings = set()
     reversed_strings = set()
@@ -10,14 +16,13 @@ def f01(l: list[str]) -> set[str]:
 
     return unique_strings
 
-
-def f02(d: dict[str, set[int]]) -> dict[str, set[int]]:
+def f02(d: dict[str,set[int]]) -> dict[str,set[int]]:
     result = {}
 
     for key, value in d.items():
         lowercase_key = key.lower()
         if lowercase_key in result:
-            result[lowercase_key] |= value
+            result[lowercase_key] |= value 
         else:
             result[lowercase_key] = value
 
@@ -30,13 +35,13 @@ def f03(m: int, n: int, c: str) -> list[str]:
     for i in range(m, n + 1):
         result.append(c * i)
 
-    for i in range(n, m, - 1):
+    for i in range(n, m, -1):
         result.append(c * i)
 
     return result
 
 
-def f04(passage: str, subs: dict[str, str]) -> str:
+def f04(passage: str, subs: dict[str,str]) -> str:
     words = passage.split()
     result = []
 
@@ -59,6 +64,9 @@ def f05(s1: str, s2: str) -> list[str | set[str]]:
             result.append(word1)
         else:
             result.append({word1, word2})
-
+    
     return result
 
+
+# Do not change the following line!
+version = 'sum23mid1cab'

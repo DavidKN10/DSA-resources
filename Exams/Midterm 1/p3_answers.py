@@ -1,3 +1,8 @@
+# Your solutions to questions in part 3 on the exam will go in this file.
+# Modify the code below per the provided specifications. Do NOT change the 
+# names of functions/methods/classes nor their signatures.
+
+
 import numpy as np
 from typing import Any, Iterator
 
@@ -22,16 +27,18 @@ class ArrayList:
 
     def __len__(self) -> str:
         return self.size
-
+    
     def __repr__(self) -> str:
         return '[' + ', '.join(repr(x) for x in self) + ']'
-
+    
     def __getitem__(self, idx: int) -> Any:
         if idx < 0 or idx >= self.size:
             raise IndexError
         return self.data[idx]
+    
 
-    # You should not modify any code above this line!
+    ## You should not modify any code above this line!
+    
 
     def iter_in_order(self, idxs: list[int]) -> Iterator:
         """Solution to question 1."""
@@ -40,6 +47,7 @@ class ArrayList:
                 raise IndexError
             yield self.data[idx]
 
+    
     def move_range(self, src: int, dst: int, n: int) -> None:
         """Solution to question 2."""
         temp_array = np.empty(n, dtype=object)
@@ -68,3 +76,7 @@ class ArrayList:
 
         # Update the size of the ArrayList
         self.size += n
+
+
+# Do not change the following line!
+version = 'sum23mid1cab'
