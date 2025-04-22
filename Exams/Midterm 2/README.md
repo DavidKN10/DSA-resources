@@ -1,4 +1,4 @@
-# CS 331 Midterm Exam 2 (Summer 2023)
+# Midterm Exam 2 (Summer 2023)
 
 ## Part 1: Multiple Choice
 
